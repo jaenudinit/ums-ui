@@ -6,12 +6,12 @@
     ]"
   >
     <!-- Header -->
-    <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+    <div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-gray-700">
       <span v-if="!isCollapsed" class="font-bold text-lg inline-flex items-center">
-        <img src="/favicon.ico" width="32" alt=""> &nbsp; Swan Shogunavo
+        <img src="../../public/icon-ums.webp" width="48" alt=""> &nbsp; UM System
       </span>
       <span v-else class="text-2xl text-blue-600">
-        <img src="/favicon.ico" width="35" alt="">
+        <img src="../../public/icon-ums.webp" :style="{ maxWidth: '48px', marginLeft: '-10px' }" alt="">
       </span>
 
       <button @click="$emit('close')" class="lg:hidden text-gray-600 dark:text-gray-300 cursor-pointer">

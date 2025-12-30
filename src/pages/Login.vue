@@ -1,11 +1,11 @@
 <template>
   <div class="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600">
     <div class="w-full max-w-sm bg-white rounded-xl shadow-lg p-6 transform transition duration-300 hover:scale-105 m-8">
-      <div class="flex justify-center mb-4">
-        <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="logo" class="w-12 h-12" />
+      <div class="flex justify-center mb-0">
+        <img src="../../public/logo-ums.webp" alt="logo" class="w-40 h-40" />
       </div>
 
-      <h2 class="text-xl font-bold text-center text-gray-800 mb-1">Welcome Back</h2>
+      <!-- <h2 class="text-xl font-bold text-center text-gray-800 mb-1">Welcome Back</h2> -->
       <p class="text-center text-gray-500 mb-4 text-sm">Sign in to continue</p>
 
       <form @submit.prevent="handleLogin" class="space-y-3">

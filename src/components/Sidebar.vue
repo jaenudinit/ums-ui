@@ -20,7 +20,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="mt-6 space-y-2">
+    <nav class="space-y-2 overflow-auto" :style="{ height: 'calc(100vh - 70px)' }">
       <SidebarItem
         v-for="(menu, index) in menus"
         :key="index"

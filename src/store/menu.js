@@ -3,7 +3,7 @@ import { authClient } from '../api'; // ✅ gunakan client modular
 
 export const useMenuStore = defineStore('menu', {
   state: () => ({
-    items: JSON.parse(localStorage.getItem('menu') || '[]'),
+    items: JSON.parse(sessionStorage.getItem('menu') || '[]'),
     loaded: false, // 🔄 status apakah menu sudah dimuat
   }),
 
@@ -20,7 +20,7 @@ export const useMenuStore = defineStore('menu', {
         if (res.data.status === 200 && Array.isArray(res.data.data)) {
           this.items = res.data.data;
           this.loaded = true;
-          localStorage.setItem('menu', JSON.stringify(this.items));
+          sessionStorage.setItem('menu', JSON.stringify(this.items));
         } else {
           this.clearMenu();
         }
@@ -36,7 +36,7 @@ export const useMenuStore = defineStore('menu', {
     clearMenu() {
       this.items = [];
       this.loaded = false;
-      localStorage.removeItem('menu');
+      sessionStorage.removeItem('menu');
     },
   },
 });

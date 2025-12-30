@@ -25,7 +25,7 @@ const router = createRouter({
 // Middleware autentikasi
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
-  const token = authStore.token || localStorage.getItem('token');
+  const token = authStore.token || sessionStorage.getItem('token');
   const isAuthenticated = !!token;
 
   if (to.meta.requiresAuth && !isAuthenticated) {

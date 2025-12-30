@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-6 max-w-2xl mx-auto">
-    <h1 class="text-2xl font-bold mb-4">Retur</h1>
+    <h1 class="text-2xl font-bold mb-4">Permissions</h1>
 
     <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow space-y-4">
       <div>

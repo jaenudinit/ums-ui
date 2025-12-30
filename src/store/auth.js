@@ -5,8 +5,8 @@ import { isTokenExpired } from '../utils/token';
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
-    token: localStorage.getItem('token') || '',
-    refreshToken: localStorage.getItem('refreshToken') || '',
+    token: sessionStorage.getItem('token') || '',
+    refreshToken: sessionStorage.getItem('refreshToken') || '',
     user: null,
   }),
 
@@ -61,8 +61,8 @@ export const useAuthStore = defineStore('auth', {
       this.token = accessToken;
       this.refreshToken = refreshToken;
 
-      localStorage.setItem('token', accessToken);
-      localStorage.setItem('refreshToken', refreshToken);
+      sessionStorage.setItem('token', accessToken);
+      sessionStorage.setItem('refreshToken', refreshToken);
     },
 
     async refreshAccessToken() {
@@ -73,7 +73,7 @@ export const useAuthStore = defineStore('auth', {
 
         if (res.data.status === 200 && res.data.data?.accessToken) {
           this.token = res.data.data.accessToken;
-          localStorage.setItem('token', this.token);
+          sessionStorage.setItem('token', this.token);
           return true;
         } else {
           this.logout();
@@ -106,8 +106,8 @@ export const useAuthStore = defineStore('auth', {
       this.token = '';
       this.refreshToken = '';
       this.user = null;
-      localStorage.removeItem('token');
-      localStorage.removeItem('refreshToken');
+      sessionStorage.removeItem('token');
+      sessionStorage.removeItem('refreshToken');
     },
   },
 });

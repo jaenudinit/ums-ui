@@ -21,7 +21,7 @@
     <!-- Overlay untuk mobile -->
     <div
       v-if="sidebarOpen && isMobile"
-      class="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+      class="fixed inset-0 bg-gray-500/10 z-30 lg:hidden"
       @click="sidebarOpen = false"
     ></div>
 

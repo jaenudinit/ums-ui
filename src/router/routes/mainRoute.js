@@ -3,12 +3,12 @@ import MainLayout from '../../layouts/MainLayout.vue';
 
 // Pages
 import Dashboard from '../../pages/Dashboard.vue';
-import Settings from '../../pages/StockIn.vue';
-import Picking from '../../pages/Picking.vue';
-import Packing from '../../pages/Packing.vue';
-import Shipment from '../../pages/Shipment.vue';
-import Retur from '../../pages/Retur.vue';
-// import Inventory from '../../pages/Inventory.vue'; // Contoh tambahan
+import Users from '../../pages/User.vue';
+import Roles from '../../pages/Role.vue';
+import Permissions from '../../pages/Permission.vue';
+import Menus from '../../pages/Menu.vue';
+import UserRoles from '../../pages/UserRoles.vue';
+import RolePermissions from '../../pages/RolePermissions.vue';
 
 export default [
   {
@@ -20,37 +20,43 @@ export default [
         path: 'dashboard',
         name: 'Dashboard',
         component: Dashboard,
-        meta: { title: 'Dashboard - WMS' },
+        meta: { title: 'Dashboard - UMS' },
       },
       {
-        path: 'stockin',
-        name: 'Stock In',
-        component: Settings,
-        meta: { title: 'Stock In - WMS' },
+        path: 'users',
+        name: 'Users',
+        component: Users,
+        meta: { title: 'User - UMS' },
       },
       {
-        path: 'picking',
-        name: 'Picking',
-        component: Picking,
-        meta: { title: 'Picking - WMS' },
+        path: 'roles',
+        name: 'Roles',
+        component: Roles,
+        meta: { title: 'Role - UMS' },
       },
       {
-        path: 'packing',
-        name: 'Packing',
-        component: Packing,
-        meta: { title: 'Packing - WMS' },
+        path: 'permissions',
+        name: 'Permissions',
+        component: Permissions,
+        meta: { title: 'Permissions - UMS' },
       },
       {
-        path: 'shipment',
-        name: 'Shipment',
-        component: Shipment,
-        meta: { title: 'Shipment - WMS' },
+        path: 'menus',
+        name: 'Menus',
+        component: Menus,
+        meta: { title: 'Menus - UMS' },
       },
       {
-        path: 'retur',
-        name: 'Retur',
-        component: Retur,
-        meta: { title: 'Retur - WMS' },
+        path: 'user-roles',
+        name: 'UserRoles',
+        component: UserRoles,
+        meta: { title: 'User Roles - UMS' },
+      },
+      {
+        path: 'role-permissions',
+        name: 'RolePermissions',
+        component: RolePermissions,
+        meta: { title: 'Role Permissions - UMS' },
       }
     ],
   },
